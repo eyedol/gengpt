@@ -1,0 +1,40 @@
+Screen {
+    background: $panel;
+}
+
+Input {
+    dock: bottom;
+    margin: 1 0;
+}
+
+#results {
+    width: 100%;
+    height: auto;
+
+}
+
+#results-container {
+    background: $background 50%;
+    margin: 0 0 1 0;
+    height: 100%;
+    overflow: hidden auto;
+    border: tall $background;
+}
+
+#results-container:focus {
+    border: tall $accent;
+}
+
+#tree-view {
+    display: none; 
+    scrollbar-gutter: stable;
+    overflow: auto;    
+    width: auto;    
+    height: 100%;            
+    dock: left;       
+}
+
+Main.-show-tree #tree-view {
+    display: block;        
+    max-width: 50%;
+}

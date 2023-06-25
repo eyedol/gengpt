@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "GenGPT"
+version = "0.1.0"
+description = "Generative GPT"
+authors = ["Henry Addo <henry@addhen.org>"]
+readme = "README.md"
+packages = [{include = "gengpt"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+textual = "^0.28.1"
+langchain = "^0.0.210"
+openai = "^0.27.8"
+
+[tool.poetry.group.dev.dependencies]
+textual = {extras = ["dev"],  version="^0.28.1"}
+mypy = "^1.1.1"
+pylint = "^2.17.1"
+pre-commit = "^3.2.1"
+black = "^23.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gengpt = "gengpt.app.app:run"
