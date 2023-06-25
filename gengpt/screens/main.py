@@ -44,9 +44,12 @@ class Main(Screen):
         yield Header()
         with Container():
             yield FilteredDirectoryTree(self.path, id="tree-view")
-            with VerticalScroll(id="results-container"):
-                yield Markdown(id="results")
-            yield Input(placeholder="Enter a prompt to generate code or explain code")
+            with Container():
+                with VerticalScroll(id="results-container"):
+                    yield Markdown(id="results")
+                yield Input(
+                    placeholder="Enter a prompt to generate code or explain code"
+                )
         yield Footer()
 
     def on_mount(self) -> None:
