@@ -9,7 +9,7 @@ from textual.reactive import var
 from textual.screen import Screen
 from textual.widgets import DirectoryTree, Footer, Header, Input, Markdown
 
-from ..gpt import run_query
+from ..chain import run_query
 
 
 class FilteredDirectoryTree(DirectoryTree):
