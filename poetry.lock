@@ -789,13 +789,13 @@ files = [
 
 [[package]]
 name = "langchain"
-version = "0.0.215"
+version = "0.0.216"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langchain-0.0.215-py3-none-any.whl", hash = "sha256:af9587c2eb317a6e33123f8a4ee8ccd8685cfab62359ea4fec52c962d9646acf"},
-    {file = "langchain-0.0.215.tar.gz", hash = "sha256:a6b261f3be941eeac2d9b37fbf8996fa4279ef724f064e8c90813046126da85b"},
+    {file = "langchain-0.0.216-py3-none-any.whl", hash = "sha256:6624582b445cb24f486ee9032dc58136aa1e5862ec7287e43739e930168aaa22"},
+    {file = "langchain-0.0.216.tar.gz", hash = "sha256:3b3d8fe1ad951191ba183dda996601d199e09eab859979a6a0defde8f11cac4a"},
 ]
 
 [package.dependencies]
@@ -1850,7 +1850,9 @@ python-versions = ">=3.7"
 files = [
     {file = "SQLAlchemy-2.0.17-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:04383f1e3452f6739084184e427e9d5cb4e68ddc765d52157bf5ef30d5eca14f"},
     {file = "SQLAlchemy-2.0.17-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:724355973297bbe547f3eb98b46ade65a67a3d5a6303f17ab59a2dc6fb938943"},
+    {file = "SQLAlchemy-2.0.17-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:cf07ff9920cb3ca9d73525dfd4f36ddf9e1a83734ea8b4f724edfd9a2c6e82d9"},
     {file = "SQLAlchemy-2.0.17-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f2f389f77c68dc22cb51f026619291c4a38aeb4b7ecb5f998fd145b2d81ca513"},
+    {file = "SQLAlchemy-2.0.17-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:ba03518e64d86f000dc24ab3d3a1aa876bcbaa8aa15662ac2df5e81537fa3394"},
     {file = "SQLAlchemy-2.0.17-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:218fb20c01e95004f50a3062bf4c447dcb360cab8274232f31947e254f118298"},
     {file = "SQLAlchemy-2.0.17-cp310-cp310-win32.whl", hash = "sha256:b47be4c6281a86670ea5cfbbbe6c3a65366a8742f5bc8b986f790533c60b5ddb"},
     {file = "SQLAlchemy-2.0.17-cp310-cp310-win_amd64.whl", hash = "sha256:74ddcafb6488f382854a7da851c404c394be3729bb3d91b02ad86c5458140eff"},
@@ -1879,7 +1881,9 @@ files = [
     {file = "SQLAlchemy-2.0.17-cp38-cp38-win_amd64.whl", hash = "sha256:40a3dc52b2b16f08b5c16b9ee7646329e4b3411e9280e5e8d57b19eaa51cbef4"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:e3189432db2f5753b4fde1aa90a61c69976f4e7e31d1cf4611bfe3514ed07478"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:6150560fcffc6aee5ec9a97419ac768c7a9f56baf7a7eb59cb4b1b6a4d463ad9"},
+    {file = "SQLAlchemy-2.0.17-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:910d45bf3673f0e4ef13858674bd23cfdafdc8368b45b948bf511797dbbb401d"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d0aeb3afaa19f187a70fa592fbe3c20a056b57662691fd3abf60f016aa5c1848"},
+    {file = "SQLAlchemy-2.0.17-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:36a87e26fe8fa8c466fae461a8fcb780d0a1cbf8206900759fc6fe874475a3ce"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:e3a6b2788f193756076061626679c5c5a6d600ddf8324f986bc72004c3e9d92e"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-win32.whl", hash = "sha256:af7e2ba75bf84b64adb331918188dda634689a2abb151bc1a583e488363fd2f8"},
     {file = "SQLAlchemy-2.0.17-cp39-cp39-win_amd64.whl", hash = "sha256:394ac3adf3676fad76d4b8fcecddf747627f17f0738dc94bac15f303d05b03d4"},
@@ -2248,4 +2252,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "2eaf42d842678e4e4b741e8b78eb273920a5984983258d49c4c6c41a8f172fec"
+content-hash = "91749d8f13be55605f85ff25964b741b755c49bc185bd4e4fc5101109ca3b9cd"
