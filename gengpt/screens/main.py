@@ -27,14 +27,20 @@ class Main(Screen):
         ("q", "app.quit", "Quit"),
     ]
 
-    path: str = expanduser("~") if len(sys.argv) < 2 else sys.argv[1]
+    dataset_source_path: str = expanduser("~") if len(sys.argv) < 2 else sys.argv[1]
+    dataset_store_path: str | None = None
     show_tree = var(True)
 
-    def __init__(self, initial_path: str | None = None) -> None:
+    def __init__(
+        self,
+        dataset_source_path: str | None = None,
+        dataset_store_path: str | None = None,
+    ) -> None:
         """Initialise the main screen."""
 
         super().__init__()
-        self.path = initial_path
+        self.dataset_source_path = dataset_source_path
+        self.dataset_store_path = dataset_store_path
 
     def watch_show_tree(self, show_tree: bool) -> None:
         """Called when show_tree is modified."""
@@ -43,7 +49,7 @@ class Main(Screen):
     def compose(self) -> ComposeResult:
         yield Header()
         with Container():
-            yield FilteredDirectoryTree(self.path, id="tree-view")
+            yield FilteredDirectoryTree(self.dataset_source_path, id="tree-view")
             with Container():
                 with VerticalScroll(id="results-container"):
                     yield Markdown(id="results")
@@ -60,10 +66,12 @@ class Main(Screen):
         """Handle the user submitting the input."""
         if message.value:
             # todo run the prompt and feed it to the markdown viewer
-            # results = run_query(message.value, self.path)
-            self.query_one("#results", Markdown).update(
-                self.path.replace(Path(self.path).name, "")
+            dataset_dir = self.dataset_source_path.replace(
+                Path(self.dataset_source_path).name, ""
             )
+            store_path = self.dataset_store_path
+            results = run_query(message.value, dataset_dir, store_path)
+            self.query_one("#results", Markdown).update(results)
         else:
             # Clear the results
             self.query_one("#results", Markdown).update("")
@@ -73,7 +81,7 @@ class Main(Screen):
     ) -> None:
         """Called when the user click a file in the directory tree."""
         event.stop()
-        self.path = str(event.path)
+        self.dataset_source_path = str(event.path)
 
     def action_toggle_files(self) -> None:
         """Called in response to key binding."""

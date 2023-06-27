@@ -9,8 +9,12 @@ packages = [{include = "gengpt"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 textual = "^0.28.1"
-langchain = "^0.0.210"
+langchain = "^0.0.215"
 openai = "^0.27.8"
+aioboto3 = "^11.2.0"
+deeplake = "^3.6.6"
+numpy = "^1.25.0"
+numcodecs = "^0.11.0"
 
 [tool.poetry.group.dev.dependencies]
 textual = {extras = ["dev"],  version="^0.28.1"}

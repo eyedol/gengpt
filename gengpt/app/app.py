@@ -1,4 +1,8 @@
 """The main application runner."""
+import platform
+import tempfile
+
+from pathlib import Path
 from argparse import ArgumentParser, Namespace
 from os.path import expanduser
 
@@ -19,7 +23,10 @@ class MainApp(App[None]):
     def on_mount(self) -> None:
         """Set up the application after the DOM is ready."""
         self.push_screen(
-            Main(" ".join(self._args.path) if self._args.path else expanduser("~"))
+            Main(
+                " ".join(self._args.source) if self._args.source else expanduser("~"),
+                self._args.store,
+            )
         )
 
 
@@ -41,10 +48,22 @@ def get_args() -> Namespace:
         version=f"%(prog)s {__version__}",
     )
 
-    parser.add_argument("path", help="The path to the source file", nargs="*")
+    parser.add_argument(
+        "source", help="The path to the source of the dataset to be trained", nargs="*"
+    )
+    parser.add_argument(
+        "store",
+        help="The path where to store the trained dataset",
+        nargs="*",
+        default=_get_temp_dir(),
+    )
     return parser.parse_args()
 
 
 def run() -> None:
     """Run the application."""
     MainApp(get_args()).run()
+
+
+def _get_temp_dir():
+    return "/tmp/" if platform.system() == "Darwin" else tempfile.gettempdir()
