@@ -66,4 +66,4 @@ def run() -> None:
 
 
 def _get_temp_dir():
-    return "/tmp/" if platform.system() == "Darwin" else tempfile.gettempdir()
+    return tempfile.mkdtemp(prefix="gen_", suffix="_gpt")
