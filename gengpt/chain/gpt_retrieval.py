@@ -1,15 +1,28 @@
 import os
 
+from typing import (
+    Iterable,
+    List,
+)
+
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import DeepLake
 from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.docstore.document import Document
 
 
-def run_query(query, dataset_source_path, dataset_store_path):
-    db = DeepLake(dataset_path=dataset_store_path, embedding_function=_get_embiddings())
+def get_deeplake(dataset_store_path: str) -> DeepLake:
+    return DeepLake(
+        dataset_path=dataset_store_path, embedding_function=_get_embiddings()
+    )
+
+
+def run_query(
+    db: DeepLake, query: str, dataset_source_path: str, dataset_store_path: str
+) -> str:
     _add_docs_deeplake_db(db, dataset_source_path)
     retriever = _retrieve_deeplake_data(db)
     chain = RetrievalQA.from_chain_type(
@@ -19,8 +32,8 @@ def run_query(query, dataset_source_path, dataset_store_path):
     return chain.run(query)
 
 
-def _get_docs(dir):
-    docs = []
+def _get_docs(dir) -> List[str]:
+    docs: List[str] = []
     for dirpath, dirnames, filenames in os.walk(dir):
         for file in filenames:
             try:
@@ -31,12 +44,12 @@ def _get_docs(dir):
     return docs
 
 
-def _get_splittered_text(docs):
+def _get_splittered_text(documents: Iterable[Document]) -> List[Document]:
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    return text_splitter.split_documents(docs)
+    return text_splitter.split_documents(documents)
 
 
-def _get_embiddings():
+def _get_embiddings() -> OpenAIEmbeddings:
     return OpenAIEmbeddings(disallowed_special=())
 
 

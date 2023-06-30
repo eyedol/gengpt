@@ -9,7 +9,9 @@ from textual.reactive import var
 from textual.screen import Screen
 from textual.widgets import DirectoryTree, Footer, Header, Input, Markdown
 
-from ..chain import run_query
+from langchain.vectorstores import DeepLake
+
+from ..chain import run_query, get_deeplake
 
 
 class FilteredDirectoryTree(DirectoryTree):
@@ -30,6 +32,7 @@ class Main(Screen):
     dataset_source_path: str = expanduser("~") if len(sys.argv) < 2 else sys.argv[1]
     dataset_store_path: str | None = None
     show_tree = var(True)
+    deeplake: DeepLake | None
 
     def __init__(
         self,
@@ -41,6 +44,7 @@ class Main(Screen):
         super().__init__()
         self.dataset_source_path = dataset_source_path
         self.dataset_store_path = dataset_store_path
+        self.deeplake = get_deeplake(dataset_store_path)
 
     def watch_show_tree(self, show_tree: bool) -> None:
         """Called when show_tree is modified."""
