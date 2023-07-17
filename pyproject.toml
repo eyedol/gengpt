@@ -9,7 +9,7 @@ packages = [{include = "gengpt"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 textual = "^0.29.0"
-langchain = "^0.0.232"
+langchain = "^0.0.234"
 openai = "^0.27.8"
 aioboto3 = "^11.2.0"
 deeplake = "^3.6.6"
