@@ -786,19 +786,19 @@ files = [
 
 [[package]]
 name = "langchain"
-version = "0.0.235"
+version = "0.0.237"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langchain-0.0.235-py3-none-any.whl", hash = "sha256:aed680f62afc0031cc5b0df840a4c5f8fe6d874356fc5695b92f8c0f779462b0"},
-    {file = "langchain-0.0.235.tar.gz", hash = "sha256:6734849e111a4c60e187a1ce7856b31e623604326e48b96601316d108633abd1"},
+    {file = "langchain-0.0.237-py3-none-any.whl", hash = "sha256:8eed8ea374b3487387ab81e418a1b629d2475f7af884ad83ff7172dc93b580dd"},
+    {file = "langchain-0.0.237.tar.gz", hash = "sha256:186e2d99b4aac91c4d128234d6f206732c70a9688e9cc63863f23520746eefaf"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.8.3,<4.0.0"
 dataclasses-json = ">=0.5.7,<0.6.0"
-langsmith = ">=0.0.7,<0.0.8"
+langsmith = ">=0.0.10,<0.0.11"
 numexpr = ">=2.8.4,<3.0.0"
 numpy = ">=1,<2"
 openapi-schema-pydantic = ">=1.2,<2.0"
@@ -824,13 +824,13 @@ text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
 
 [[package]]
 name = "langsmith"
-version = "0.0.7"
+version = "0.0.10"
 description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform."
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langsmith-0.0.7-py3-none-any.whl", hash = "sha256:9e0ab264b499daa778c694f9129859830820d3fb3a7c93309b630a22b68a88a9"},
-    {file = "langsmith-0.0.7.tar.gz", hash = "sha256:2f18e51cfd4e42f2b3cf00fa87e9d03012eb7269cdafd8e7c0cf7aa828dcc03e"},
+    {file = "langsmith-0.0.10-py3-none-any.whl", hash = "sha256:716412979613a5eb550c9bce33165cd1bad296eb19009040155deccef427ef07"},
+    {file = "langsmith-0.0.10.tar.gz", hash = "sha256:11e5db0d8e29ee5583cabd872eeece8ce50738737b1f52f316ac984f4a1a58c5"},
 ]
 
 [package.dependencies]
@@ -2313,4 +2313,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "08b7ed1c3bdba306a26dddc4130cde0b8627ab8deba92bf5e28cfab49a33b714"
+content-hash = "201b12dd8d851e4180e8ae587ed991fdc42f7fd641336cd663a58d9f1a7bbda7"
