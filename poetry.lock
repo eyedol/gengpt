@@ -451,12 +451,12 @@ dev = ["flake8", "hypothesis", "ipython", "mypy (>=0.710)", "portray", "pytest (
 
 [[package]]
 name = "deeplake"
-version = "3.6.18"
+version = "3.6.19"
 description = "Activeloop Deep Lake"
 optional = false
 python-versions = "*"
 files = [
-    {file = "deeplake-3.6.18.tar.gz", hash = "sha256:9a964ea98f8ab3609447f0daf6eca0ddf9aa227158f1c2b105a6f4aea13b480d"},
+    {file = "deeplake-3.6.19.tar.gz", hash = "sha256:6619af93caa338e906d1d9ea3964f312ec5cf2f1b45512b8a877eb741c9740a8"},
 ]
 
 [package.dependencies]
