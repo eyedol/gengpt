@@ -8,7 +8,7 @@ packages = [{include = "gengpt"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-textual = "^0.36.0"
+textual = "^0.37.0"
 langchain = "^0.0.291"
 openai = "^0.28.0"
 aioboto3 = "^11.2.0"
@@ -18,7 +18,7 @@ numcodecs = "^0.11.0"
 tiktoken = "^0.5.0"
 
 [tool.poetry.group.dev.dependencies]
-textual = {extras = ["dev"],  version="^0.36.0"}
+textual = {extras = ["dev"],  version="^0.37.0"}
 mypy = "^1.1.1"
 pylint = "^2.17.1"
 pre-commit = "^3.2.1"
