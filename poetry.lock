@@ -1266,28 +1266,32 @@ setuptools = "*"
 
 [[package]]
 name = "numcodecs"
-version = "0.12.0"
+version = "0.12.1"
 description = "A Python package providing buffer compression and transformation codecs for use in data storage and communication applications."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "numcodecs-0.12.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:e03960dd507e00bc102ff4ca2f14fa40b0cfc2ba7279752d31558d0787431a53"},
-    {file = "numcodecs-0.12.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:68b3a18a93a96cba0a1d367ae76c02a74f29f93790e1c8b0423eacc4ce5d421a"},
-    {file = "numcodecs-0.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3a265db9177bd4a19939651b68722b72044bc92bb0b646e2a0d55835c0acb9d5"},
-    {file = "numcodecs-0.12.0-cp310-cp310-win_amd64.whl", hash = "sha256:3b5a0be940093d81eb49b0adba62615d3b973174d8167dbd63cc6d392e157bf6"},
-    {file = "numcodecs-0.12.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:f16787a674d1badd55f827b01bbc62b3ef2adecbed59a7db7139a328f0744e4a"},
-    {file = "numcodecs-0.12.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:98dbc61366e2974a1bdc28e08ed790c74d39c9cb40ce3f487ae6e6a76da843dd"},
-    {file = "numcodecs-0.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bd746cd6e7af4925bd2d3e902b5027147d71590cdc8e9e2ad999014fc2405c3b"},
-    {file = "numcodecs-0.12.0-cp311-cp311-win_amd64.whl", hash = "sha256:eae479f65b75af0e75a20049bf83beff154c4662a233695b4f7848d5eee0ef2d"},
-    {file = "numcodecs-0.12.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:0c1f679b148bfdc9341686814485d03ad652ea551a90debadbbf9da3fb4cc003"},
-    {file = "numcodecs-0.12.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:aa78ffc79a94aa78234821639c253219d8a26455f020c760ad1b331144363849"},
-    {file = "numcodecs-0.12.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:01f5457c0c81a556812240a2318c6022ca5c6f66fe2a51f619bdf8b0c855b5f2"},
-    {file = "numcodecs-0.12.0-cp38-cp38-win_amd64.whl", hash = "sha256:e9fc2f2abcb09c301c8e1db16e4d5dc9faf93be8c46d88ac3974e023f0a3533b"},
-    {file = "numcodecs-0.12.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:98c2cedb3d6dd1238b033657da0b710689a9600813bfece28fd7c158328c0d4d"},
-    {file = "numcodecs-0.12.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:182458355f5cad297575f9a16e804fe345c22c7a1b796ee9a0a8bce5a9f66c60"},
-    {file = "numcodecs-0.12.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1fe66c7a2b016e772a60dc8d68479958ae8c9ce306bcc318ee3d2ca883930e94"},
-    {file = "numcodecs-0.12.0-cp39-cp39-win_amd64.whl", hash = "sha256:488ba767d956f8dbf794c4c30df1983a385f048a4f1bc670dd0761b8fe7fd7a3"},
-    {file = "numcodecs-0.12.0.tar.gz", hash = "sha256:6388e5f4e94d18a7165fbd1c9d3637673b74157cff8bc644005f9e2a4c717d6e"},
+    {file = "numcodecs-0.12.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d37f628fe92b3699e65831d5733feca74d2e33b50ef29118ffd41c13c677210e"},
+    {file = "numcodecs-0.12.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:941b7446b68cf79f089bcfe92edaa3b154533dcbcd82474f994b28f2eedb1c60"},
+    {file = "numcodecs-0.12.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0e79bf9d1d37199ac00a60ff3adb64757523291d19d03116832e600cac391c51"},
+    {file = "numcodecs-0.12.1-cp310-cp310-win_amd64.whl", hash = "sha256:82d7107f80f9307235cb7e74719292d101c7ea1e393fe628817f0d635b7384f5"},
+    {file = "numcodecs-0.12.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:eeaf42768910f1c6eebf6c1bb00160728e62c9343df9e2e315dc9fe12e3f6071"},
+    {file = "numcodecs-0.12.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:135b2d47563f7b9dc5ee6ce3d1b81b0f1397f69309e909f1a35bb0f7c553d45e"},
+    {file = "numcodecs-0.12.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a191a8e347ecd016e5c357f2bf41fbcb026f6ffe78fff50c77ab12e96701d155"},
+    {file = "numcodecs-0.12.1-cp311-cp311-win_amd64.whl", hash = "sha256:21d8267bd4313f4d16f5b6287731d4c8ebdab236038f29ad1b0e93c9b2ca64ee"},
+    {file = "numcodecs-0.12.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:2f84df6b8693206365a5b37c005bfa9d1be486122bde683a7b6446af4b75d862"},
+    {file = "numcodecs-0.12.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:760627780a8b6afdb7f942f2a0ddaf4e31d3d7eea1d8498cf0fd3204a33c4618"},
+    {file = "numcodecs-0.12.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c258bd1d3dfa75a9b708540d23b2da43d63607f9df76dfa0309a7597d1de3b73"},
+    {file = "numcodecs-0.12.1-cp312-cp312-win_amd64.whl", hash = "sha256:e04649ea504aff858dbe294631f098fbfd671baf58bfc04fc48d746554c05d67"},
+    {file = "numcodecs-0.12.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:caf1a1e6678aab9c1e29d2109b299f7a467bd4d4c34235b1f0e082167846b88f"},
+    {file = "numcodecs-0.12.1-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:c17687b1fd1fef68af616bc83f896035d24e40e04e91e7e6dae56379eb59fe33"},
+    {file = "numcodecs-0.12.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:29dfb195f835a55c4d490fb097aac8c1bcb96c54cf1b037d9218492c95e9d8c5"},
+    {file = "numcodecs-0.12.1-cp38-cp38-win_amd64.whl", hash = "sha256:2f1ba2f4af3fd3ba65b1bcffb717fe65efe101a50a91c368f79f3101dbb1e243"},
+    {file = "numcodecs-0.12.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:2fbb12a6a1abe95926f25c65e283762d63a9bf9e43c0de2c6a1a798347dfcb40"},
+    {file = "numcodecs-0.12.1-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:f2207871868b2464dc11c513965fd99b958a9d7cde2629be7b2dc84fdaab013b"},
+    {file = "numcodecs-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:abff3554a6892a89aacf7b642a044e4535499edf07aeae2f2e6e8fc08c9ba07f"},
+    {file = "numcodecs-0.12.1-cp39-cp39-win_amd64.whl", hash = "sha256:ef964d4860d3e6b38df0633caf3e51dc850a6293fd8e93240473642681d95136"},
+    {file = "numcodecs-0.12.1.tar.gz", hash = "sha256:05d91a433733e7eef268d7e80ec226a0232da244289614a8f3826901aec1098e"},
 ]
 
 [package.dependencies]
@@ -1297,6 +1301,7 @@ numpy = ">=1.7"
 docs = ["mock", "numpydoc", "sphinx (<7.0.0)", "sphinx-issues"]
 msgpack = ["msgpack"]
 test = ["coverage", "flake8", "pytest", "pytest-cov"]
+test-extras = ["importlib-metadata"]
 zfpy = ["zfpy (>=1.0.0)"]
 
 [[package]]
