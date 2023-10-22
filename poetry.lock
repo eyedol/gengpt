@@ -817,13 +817,13 @@ files = [
 
 [[package]]
 name = "langchain"
-version = "0.0.319"
+version = "0.0.320"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langchain-0.0.319-py3-none-any.whl", hash = "sha256:a61448fd418ff9478f2be3477c9c92acbf6b6acd8163c58c994a6158d4d116f8"},
-    {file = "langchain-0.0.319.tar.gz", hash = "sha256:4fe5025e5fd48dcf8e02107fefe173ba997af3c8960871cc4a4467e24bb89375"},
+    {file = "langchain-0.0.320-py3-none-any.whl", hash = "sha256:53e32b581a8a0215a78086bc19725ef287a4daf4009733dfc9995d657433291c"},
+    {file = "langchain-0.0.320.tar.gz", hash = "sha256:e2dee9779583220d4031307f54169ac65fe23b81cb425756d54dce1277aef4ba"},
 ]
 
 [package.dependencies]
@@ -2337,4 +2337,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "7a95d65414a11c32a1482dfb28e3cb2cd2c8cfe13cfc3618b0f916a273aec89d"
+content-hash = "7ee3e23903efd5d04bb3aef67d18d49658f4c385abb0fcb2affbdfdf69fdb61f"
