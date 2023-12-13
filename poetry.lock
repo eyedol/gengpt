@@ -2089,13 +2089,13 @@ doc = ["reno", "sphinx", "tornado (>=4.5)"]
 
 [[package]]
 name = "textual"
-version = "0.44.1"
+version = "0.45.0"
 description = "Modern Text User Interface framework"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "textual-0.44.1-py3-none-any.whl", hash = "sha256:19cfd3a0c623bff02cc80d872ba3e93e1a5b77289fecf74c16ffcfa7407b49a1"},
-    {file = "textual-0.44.1.tar.gz", hash = "sha256:7a45b85943957095b97d0a90c4fa4d3e1028fa26493c0720f403d879157a6589"},
+    {file = "textual-0.45.0-py3-none-any.whl", hash = "sha256:6116a4f01ae7ab5a814fccbb684307fd5271c83f3852a25a09a73df173e35cac"},
+    {file = "textual-0.45.0.tar.gz", hash = "sha256:996e36543c3fa65acd0d77fc8251010f2984631a484e757ad4f1fbb3eec2c4e4"},
 ]
 
 [package.dependencies]
@@ -2455,4 +2455,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5a27fb49d8492ec59911cb7d1cb165bec622928706f01fa95d9e9e21847e5a64"
+content-hash = "d6c427fc7d811a028fd0beefa92055c90e0cf131faf1276f5b87e635ced27ae7"
