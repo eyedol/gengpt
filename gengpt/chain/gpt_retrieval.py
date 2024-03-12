@@ -1,4 +1,6 @@
 import os
+import pathlib
+import logging
 
 from typing import (
     Iterable,
@@ -14,15 +16,17 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.docstore.document import Document
 
 
-def get_deeplake(dataset_store_path: str) -> DeepLake:
+DEEPLAKE_FOLDER = "deeplake/"
+
+
+def get_deeplake(dataset_source_dir: str) -> DeepLake:
+    deeplake_repo_path = f"mem://{DEEPLAKE_FOLDER}{dataset_source_dir}"
     return DeepLake(
-        dataset_path=dataset_store_path, embedding_function=_get_embiddings()
+        dataset_path=deeplake_repo_path, embedding_function=_get_embiddings()
     )
 
 
-def run_query(
-    db: DeepLake, query: str, dataset_source_path: str, dataset_store_path: str
-) -> str:
+def run_query(db: DeepLake, query: str, dataset_source_path: str) -> str:
     _add_docs_deeplake_db(db, dataset_source_path)
     retriever = _retrieve_deeplake_data(db)
     chain = RetrievalQA.from_chain_type(

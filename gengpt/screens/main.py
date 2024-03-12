@@ -1,6 +1,6 @@
 import sys
 from os.path import expanduser
-from pathlib import Path
+from pathlib import Path, PurePath
 from typing import Iterable
 
 from textual.app import ComposeResult
@@ -8,10 +8,18 @@ from textual.containers import Container, VerticalScroll
 from textual.reactive import var
 from textual.screen import Screen
 from textual.widgets import DirectoryTree, Footer, Header, Input, Markdown
+import logging
+from textual.logging import TextualHandler
 
 from langchain.vectorstores import DeepLake
 
 from ..chain import run_query, get_deeplake
+
+logging.basicConfig(
+    level="NOTSET", format="%(message)s", datefmt="[%X]", handlers=[TextualHandler()]
+)
+
+# log = logging.getLogger("rich")
 
 
 class FilteredDirectoryTree(DirectoryTree):
@@ -30,21 +38,13 @@ class Main(Screen):
     ]
 
     dataset_source_path: str = expanduser("~") if len(sys.argv) < 2 else sys.argv[1]
-    dataset_store_path: str | None = None
     show_tree = var(True)
-    deeplake: DeepLake | None
 
-    def __init__(
-        self,
-        dataset_source_path: str | None = None,
-        dataset_store_path: str | None = None,
-    ) -> None:
+    def __init__(self, dataset_source_path: str | None = None) -> None:
         """Initialise the main screen."""
 
         super().__init__()
         self.dataset_source_path = dataset_source_path
-        self.dataset_store_path = dataset_store_path
-        self.deeplake = get_deeplake(dataset_store_path)
 
     def watch_show_tree(self, show_tree: bool) -> None:
         """Called when show_tree is modified."""
@@ -69,12 +69,13 @@ class Main(Screen):
     async def on_input_submitted(self, message: Input.Submitted) -> None:
         """Handle the user submitting the input."""
         if message.value:
-            # todo run the prompt and feed it to the markdown viewer
             dataset_dir = self.dataset_source_path.replace(
                 Path(self.dataset_source_path).name, ""
             )
-            store_path = self.dataset_store_path
-            results = run_query(message.value, dataset_dir, store_path)
+            logging.info(f"datasource {dataset_dir}")
+            path = PurePath(self.dataset_source_path)
+            db = get_deeplake(path.parent.name)
+            results = run_query(db, message.value, dataset_dir)
             self.query_one("#results", Markdown).update(results)
         else:
             # Clear the results

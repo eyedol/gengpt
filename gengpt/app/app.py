@@ -1,8 +1,5 @@
 """The main application runner."""
-import platform
-import tempfile
-
-from pathlib import Path
+from pathlib import PurePath
 from argparse import ArgumentParser, Namespace
 from os.path import expanduser
 
@@ -10,6 +7,7 @@ from textual.app import App
 
 from .. import __version__
 from ..screens import Main
+from ..chain import run_query, get_deeplake
 
 
 class MainApp(App[None]):
@@ -23,11 +21,18 @@ class MainApp(App[None]):
     def on_mount(self) -> None:
         """Set up the application after the DOM is ready."""
         self.push_screen(
-            Main(
-                " ".join(self._args.source) if self._args.source else expanduser("~"),
-                self._args.store,
-            )
+            Main(" ".join(self._args.source) if self._args.source else expanduser("~"))
         )
+
+
+def on_input_submitted() -> None:
+    """Handle the user submitting the input."""
+    args = get_args()
+    dataset_source_path = " ".join(args.source) if args.source else expanduser("~")
+    path = PurePath(dataset_source_path)
+    db = get_deeplake(path.parent.name)
+    results = run_query(db, "What is this source code about?", dataset_source_path)
+    print(f"Results is: {results}")
 
 
 def get_args() -> Namespace:
@@ -49,21 +54,14 @@ def get_args() -> Namespace:
     )
 
     parser.add_argument(
-        "source", help="The path to the source of the dataset to be trained", nargs="*"
-    )
-    parser.add_argument(
-        "store",
-        help="The path where to store the trained dataset",
+        "--source",
+        "-s",
+        help="The path to the source of the dataset to be used",
         nargs="*",
-        default=_get_temp_dir(),
     )
     return parser.parse_args()
 
 
 def run() -> None:
     """Run the application."""
-    MainApp(get_args()).run()
-
-
-def _get_temp_dir():
-    return tempfile.mkdtemp(prefix="gen_", suffix="_gpt")
+    on_input_submitted()
