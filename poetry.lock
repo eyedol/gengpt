@@ -443,12 +443,12 @@ dev = ["flake8", "hypothesis", "ipython", "mypy (>=0.710)", "portray", "pytest (
 
 [[package]]
 name = "deeplake"
-version = "3.8.23"
+version = "3.8.24"
 description = "Activeloop Deep Lake"
 optional = false
 python-versions = "*"
 files = [
-    {file = "deeplake-3.8.23.tar.gz", hash = "sha256:65b4a8ad1287a95224eaed2e8561fd97e66bd965fb7e1b5354380a5a14d85362"},
+    {file = "deeplake-3.8.24.tar.gz", hash = "sha256:afc17ce1fb9ca5caf6c772e98ca1a7d032b6063d5643eeaf5c852952b14f014e"},
 ]
 
 [package.dependencies]
@@ -456,7 +456,7 @@ aioboto3 = {version = ">=10.4.0", markers = "python_version >= \"3.7\" and sys_p
 boto3 = "*"
 click = "*"
 humbug = ">=0.3.1"
-libdeeplake = "0.0.104"
+libdeeplake = "0.0.107"
 lz4 = "*"
 nest_asyncio = {version = "*", markers = "python_version >= \"3.7\" and sys_platform != \"win32\""}
 numpy = "*"
@@ -467,12 +467,12 @@ pyjwt = "*"
 tqdm = "*"
 
 [package.extras]
-all = ["IPython", "av (>=8.1.0)", "azure-cli", "azure-identity", "azure-storage-blob", "flask", "google-api-python-client (>=2.31.0,<2.32.0)", "google-auth (>=2.0.1,<2.1.0)", "google-auth-oauthlib (>=0.4.5,<0.5.0)", "google-cloud-storage (>=1.42.0,<1.43.0)", "laspy", "libdeeplake (==0.0.104)", "nibabel", "oauth2client (>=4.1.3,<4.2.0)", "pydicom"]
+all = ["IPython", "av (>=8.1.0)", "azure-cli", "azure-identity", "azure-storage-blob", "flask", "google-api-python-client (>=2.31.0,<2.32.0)", "google-auth (>=2.0.1,<2.1.0)", "google-auth-oauthlib (>=0.4.5,<0.5.0)", "google-cloud-storage (>=1.42.0,<1.43.0)", "laspy", "libdeeplake (==0.0.107)", "nibabel", "oauth2client (>=4.1.3,<4.2.0)", "pydicom"]
 audio = ["av (>=8.1.0)"]
 av = ["av (>=8.1.0)"]
 azure = ["azure-cli", "azure-identity", "azure-storage-blob"]
 dicom = ["nibabel", "pydicom"]
-enterprise = ["libdeeplake (==0.0.104)", "pyjwt"]
+enterprise = ["libdeeplake (==0.0.107)", "pyjwt"]
 gcp = ["google-auth (>=2.0.1,<2.1.0)", "google-auth-oauthlib (>=0.4.5,<0.5.0)", "google-cloud-storage (>=1.42.0,<1.43.0)"]
 gdrive = ["google-api-python-client (>=2.31.0,<2.32.0)", "google-auth (>=2.0.1,<2.1.0)", "google-auth-oauthlib (>=0.4.5,<0.5.0)", "oauth2client (>=4.1.3,<4.2.0)"]
 medical = ["nibabel", "pydicom"]
@@ -969,29 +969,29 @@ requests = ">=2,<3"
 
 [[package]]
 name = "libdeeplake"
-version = "0.0.104"
+version = "0.0.107"
 description = "C++ backend for Deep Lake"
 optional = false
 python-versions = "*"
 files = [
-    {file = "libdeeplake-0.0.104-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:a6b6bbca760066c665ced4c6974a3adc42bbe46f2251cacd456ed05e20b74dd1"},
-    {file = "libdeeplake-0.0.104-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:c72fcaa62176088bb0235bc8a0ac27e2732b364d970af2d2bc68c6b9152190ce"},
-    {file = "libdeeplake-0.0.104-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:311bfac07404c1a4f1c6cc0e455b833acb7a66e3aa468bbdc0536eefa01f0bee"},
-    {file = "libdeeplake-0.0.104-cp310-cp310-manylinux2014_x86_64.whl", hash = "sha256:60461838e5fe219c691854a68aed3ce2f110d87b01b160cc9ccdde45f6a7470d"},
-    {file = "libdeeplake-0.0.104-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:df913f974123ed819950b30abd6878353eed295d7c742e51535abf27246fe42d"},
-    {file = "libdeeplake-0.0.104-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:5e4f332bdf29a0639d28b7ad217b6dbc6da0cd1b43e0c90b49818e49960c8c1b"},
-    {file = "libdeeplake-0.0.104-cp311-cp311-manylinux2014_aarch64.whl", hash = "sha256:e112740fff23cddcf35fa487de04ec99f7c9fda672c0cf30165fd542928d210b"},
-    {file = "libdeeplake-0.0.104-cp311-cp311-manylinux2014_x86_64.whl", hash = "sha256:ef9274273a84c9ebff5430c8ece1fbd80b8d5d2feebc43b4a5c7141548cf750f"},
-    {file = "libdeeplake-0.0.104-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:3b4675267ae2a1771538f40d6deb1562b4796090508bad3411d16c41d3316b27"},
-    {file = "libdeeplake-0.0.104-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:f7e77b0dbb8cdcffa1899ec53370e720eef1035ba3014a526a16a4dfcfab89e3"},
-    {file = "libdeeplake-0.0.104-cp38-cp38-macosx_10_12_x86_64.whl", hash = "sha256:da8f0b00c8278e95dc291f37058c440df6f53288f3294f148e55594a50606862"},
-    {file = "libdeeplake-0.0.104-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:021fbbb8f86cca9252ef8af5b5b3d7d8980f343e24e8fd8428104bb87edbc253"},
-    {file = "libdeeplake-0.0.104-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:f5406b1532794caee28b0499612a682fabd373afdcc3435db578a918276b157d"},
-    {file = "libdeeplake-0.0.104-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:e4febede2fbd41c6d8be06322969e9c76d25dd23a20fa8140e82c2a39e314a84"},
-    {file = "libdeeplake-0.0.104-cp39-cp39-macosx_10_12_x86_64.whl", hash = "sha256:7c2cffb87ce20786d765b69890cadeff0de5e0499cf4673be3545ddd624aa74f"},
-    {file = "libdeeplake-0.0.104-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:360e7bfa801e63e7a68340c9e89e44b221fb5869e579df8df2af35ec58b2602c"},
-    {file = "libdeeplake-0.0.104-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:cc9430cfaee31ff0c52c50968cd4a42629cda5f101ea0af90734d966d90c6129"},
-    {file = "libdeeplake-0.0.104-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:edf1977a0619f2fd5b34289ae69127eaa7bb9b4640f5224577c69f35ba11d840"},
+    {file = "libdeeplake-0.0.107-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:fce9c6f0bcd14f42dc30ef7f17fc897c60a5500f57864ab08f1ca0a8bd14a35f"},
+    {file = "libdeeplake-0.0.107-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:08979fd874520d360fb4728a36bcb3d9dd3ece3848c9633c133ef3282fb155bb"},
+    {file = "libdeeplake-0.0.107-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:96dc5e128d6059e21ce4319b9e5b6fedf77672899ef871be61a546d791c4a496"},
+    {file = "libdeeplake-0.0.107-cp310-cp310-manylinux2014_x86_64.whl", hash = "sha256:0a703f6071355c3973d33a76992978204c5dfe3bf7d9613aad2451ab76ef79d0"},
+    {file = "libdeeplake-0.0.107-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:977aeee46a74d8f488755cc84c24c65379674fb8ce382f654471335ee1ad429d"},
+    {file = "libdeeplake-0.0.107-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:81353a324c5f317569a39174a1fe2d8ba3df582bff852518f34cea2682bf79f6"},
+    {file = "libdeeplake-0.0.107-cp311-cp311-manylinux2014_aarch64.whl", hash = "sha256:de1327364c4f24a243d9602895f3f919d87221248f9f675b62c4f132edaccca1"},
+    {file = "libdeeplake-0.0.107-cp311-cp311-manylinux2014_x86_64.whl", hash = "sha256:4f851df8f8ecf9056c54189ae7c7c0671cdd9bb976c31121eb10d333f6e382d4"},
+    {file = "libdeeplake-0.0.107-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:603debdbebd37aa4f05979b55ae0090886c95591267c00ab9499490dfdb78c6b"},
+    {file = "libdeeplake-0.0.107-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:d57b758df2ea671a8aa4f482e533fc848fa15877cd88b74ef64917931251b8f4"},
+    {file = "libdeeplake-0.0.107-cp38-cp38-macosx_10_12_x86_64.whl", hash = "sha256:42483fd7f014aef72eeee38ca3a788aa479448e7973076edc01a8223f9282cb2"},
+    {file = "libdeeplake-0.0.107-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:266c4d8206b3dbff1ed2a027181536eb5b5891853a049c5ff90a5db54bec16b1"},
+    {file = "libdeeplake-0.0.107-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:ba2674efb03b0b02fb8a246f28795f01800a1330d912384f9b0f5cfbe0d0d8dd"},
+    {file = "libdeeplake-0.0.107-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:6d8c50abacf30a635a8118273b329609dd0a21d75d419a1a080a4622e21d1981"},
+    {file = "libdeeplake-0.0.107-cp39-cp39-macosx_10_12_x86_64.whl", hash = "sha256:3be58995fb9c1eaf48b99130f11603ba33997bfd0f0b8eb59e34047789fc8ea3"},
+    {file = "libdeeplake-0.0.107-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:cf80d11aee3cdc2a1b8dbd02c25f4f4ec04b0b631a4d96f59c4e9c469af6ad8a"},
+    {file = "libdeeplake-0.0.107-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:58f4f843d4f93d1c7d364bddf4b66c228708f2b1d616e27119bbdc748295300f"},
+    {file = "libdeeplake-0.0.107-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:419f9c1b76c64b22d25c761947231b6c1b60ba708624da8e592a076ca28ebf16"},
 ]
 
 [package.dependencies]
