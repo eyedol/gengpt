@@ -436,12 +436,12 @@ files = [
 
 [[package]]
 name = "deeplake"
-version = "3.9.8"
+version = "3.9.9"
 description = "Activeloop Deep Lake"
 optional = false
 python-versions = "*"
 files = [
-    {file = "deeplake-3.9.8.tar.gz", hash = "sha256:6f12e3bb9708575fa6a6705f4c22f5179d8f1cdce6aef509ee5938c10cd8a3ae"},
+    {file = "deeplake-3.9.9.tar.gz", hash = "sha256:2cf44b4d95e715221315bb8e8eb158ad702b3abfe456705598e29eb96e277736"},
 ]
 
 [package.dependencies]
