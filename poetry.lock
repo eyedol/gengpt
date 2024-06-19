@@ -2080,13 +2080,13 @@ doc = ["reno", "sphinx", "tornado (>=4.5)"]
 
 [[package]]
 name = "textual"
-version = "0.69.0"
+version = "0.70.0"
 description = "Modern Text User Interface framework"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "textual-0.69.0-py3-none-any.whl", hash = "sha256:51d19a5eaeb00e6dabc7b1ef3d8de558dc78e55a3b273c8cf8273b3db574a651"},
-    {file = "textual-0.69.0.tar.gz", hash = "sha256:73736996f468f20efdc8854482db02bf8799586430a39bc0a7c97f91043081b0"},
+    {file = "textual-0.70.0-py3-none-any.whl", hash = "sha256:774bf45782193760ca273b915fd685cada37d0836237d61dc57d5bcdbe2c7ddb"},
+    {file = "textual-0.70.0.tar.gz", hash = "sha256:9ca3f615b5cf442246325e40ef8255424c42b4241d3c62f9c0f96951bab82b1e"},
 ]
 
 [package.dependencies]
@@ -2415,4 +2415,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ea3a1950e9d28016c81378aefa5eb4664fc943441ac347ec3a0cf9b9ad6e2159"
+content-hash = "df215c5967930bdb56a758067fff49399b567ba39bb8fe92d018c4fdd97f38b7"
