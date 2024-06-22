@@ -436,12 +436,12 @@ files = [
 
 [[package]]
 name = "deeplake"
-version = "3.9.10"
+version = "3.9.11"
 description = "Activeloop Deep Lake"
 optional = false
 python-versions = "*"
 files = [
-    {file = "deeplake-3.9.10.tar.gz", hash = "sha256:7a703eae3880c4b20ee6f7fd4494504365e0b15440310c9949e01d96931712f8"},
+    {file = "deeplake-3.9.11.tar.gz", hash = "sha256:631aff465144e45ec943fe43cf23162f688258741b53b14cf881596caadd7926"},
 ]
 
 [package.dependencies]
@@ -452,7 +452,7 @@ humbug = ">=0.3.1"
 libdeeplake = "0.0.133"
 lz4 = "*"
 nest_asyncio = {version = "*", markers = "python_version >= \"3.7\" and sys_platform != \"win32\""}
-numpy = "*"
+numpy = "<2.0"
 pathos = "*"
 pillow = ">=10.2.0,<10.3.0"
 pydantic = "*"
