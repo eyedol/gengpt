@@ -15,7 +15,7 @@ aioboto3 = "^13.0.0"
 deeplake = "^3.6.6"
 numpy = "^1.25.0"
 numcodecs = "^0.13.0"
-tiktoken = "^0.7.0"
+tiktoken = "^0.8.0"
 
 [tool.poetry.group.dev.dependencies]
 textual = {extras = ["dev"],  version="^0.80.0"}
