@@ -927,8 +927,8 @@ langchain-core = ">=0.3.12,<0.4.0"
 langchain-text-splitters = ">=0.3.0,<0.4.0"
 langsmith = ">=0.1.17,<0.2.0"
 numpy = [
-    {version = ">=1,<2", markers = "python_version < \"3.12\""},
     {version = ">=1.26.0,<2.0.0", markers = "python_version >= \"3.12\""},
+    {version = ">=1,<2", markers = "python_version < \"3.12\""},
 ]
 pydantic = ">=2.7.4,<3.0.0"
 PyYAML = ">=5.3"
@@ -1599,8 +1599,8 @@ files = [
 astroid = ">=3.3.4,<=3.4.0-dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
-    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
     {version = ">=0.3.7", markers = "python_version >= \"3.12\""},
+    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
 ]
 isort = ">=4.2.5,<5.13.0 || >5.13.0,<6"
 mccabe = ">=0.6,<0.8"
@@ -1958,13 +1958,13 @@ doc = ["reno", "sphinx", "tornado (>=4.5)"]
 
 [[package]]
 name = "textual"
-version = "0.83.0"
+version = "0.84.0"
 description = "Modern Text User Interface framework"
 optional = false
 python-versions = "<4.0.0,>=3.8.1"
 files = [
-    {file = "textual-0.83.0-py3-none-any.whl", hash = "sha256:d6efc1e5c54086fd0a4fe274f18b5638ca24a69325c07e1b4400a7d0a1a14c55"},
-    {file = "textual-0.83.0.tar.gz", hash = "sha256:fc3b97796092d9c7e685e5392f38f3eb2007ffe1b3b1384dee6d3f10d256babd"},
+    {file = "textual-0.84.0-py3-none-any.whl", hash = "sha256:1457d2cb66ba4ea46812355f31adbb4b693424a94e69d052e4affe1dc410ec96"},
+    {file = "textual-0.84.0.tar.gz", hash = "sha256:fb89717960fea7a539823fa264252f7be1c84844e4b8d27360e6d4edb36846a8"},
 ]
 
 [package.dependencies]
@@ -2289,4 +2289,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5a972628c0ece83da024ca82ca7dda57e1ba372e458944a6581e859395899d85"
+content-hash = "a7c0ee9ba7acfc334e8373dc2c40e4f1ccf79f022df071d8b6d894fbf198cd24"
