@@ -14,7 +14,7 @@ openai = "^1.0.0"
 aioboto3 = "^13.0.0"
 deeplake = "^4.0.0"
 numpy = "^1.25.0"
-numcodecs = "^0.13.0"
+numcodecs = "^0.14.0"
 tiktoken = "^0.8.0"
 
 [tool.poetry.group.dev.dependencies]
